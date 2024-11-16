@@ -1,6 +1,6 @@
 import React from "react";
 import "./button.css";
-const Button = ({ width, height, children }) => {
+const Button = ({ width, height, children, ...props }) => {
   return (
     <button
       className="generic-button"
@@ -8,6 +8,7 @@ const Button = ({ width, height, children }) => {
         width: `${width}`,
         height: `${height}`,
       }}
+      {...props}
     >
       {children}
     </button>
